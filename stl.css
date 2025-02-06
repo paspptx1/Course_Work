@@ -1,6 +1,90 @@
-<?php
-session_start();
-session_destroy(); // Destroy all session data
-header("Location: login.php"); // Redirect to login page
-exit();
-?>
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3a7bd5, #3a6073);
+    color: #fff;
+}
+
+/* Centered Container */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form Heading */
+h2 {
+    margin-bottom: 1rem;
+    font-size: 24px;
+}
+
+/* Form Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Form Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ff5722;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e64a19;
+}
+
+/* Links */
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error {
+    color: #ffdddd;
+    background: #ff4444;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
